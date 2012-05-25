@@ -2,26 +2,28 @@
 #define CUADRA_H
 
 #include "automovil.h"
+#include "semaforo.h"
 
-class cuadra{
+class Cuadra {
 	public:
 		int id;	
-		int capacidad;
-		int ocupado;
-		cuadra cua_proxima_horizontal;
-		cuadra cua_proxima_vertical;
-		automovil fila[20];
-		semaforo sem_horizontal;
-		semaforo sem_vertical;
+		int * idAutos;
+
+		Semaforo * s;
+		
 		int veces_congestionada;
 
-		void setID(int ID);
-		int getID();
-		int getCAPACIDAD();
-		int getOCUPADO();
-		void setPROXIMAS(cuadra horizontal,cuadra vertical);
-		bool agregarAUTO(automovil AUTO);
-		automovil sacarAUTO();
+		void setid(int);
+		int getid();
+		int getAutos();
+
+		
+
+		void setPROXIMAS(Cuadra *, Cuadra *);
+
+		bool agregarAuto();
+		bool sacarAuto();
+		
 		void congestion();	
 }
 #endif

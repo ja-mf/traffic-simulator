@@ -1,25 +1,15 @@
 #ifndef AUTOMOVIL_H
 #define AUTOMOVIL_H
 
-#include "cuadra.h"
-#include "ruta.h"
-
-class automovil{
+class Automovil {
 	
 	public: 
 		int id;
-		cuadra origen;
-		cuadra destino;
-		ruta camino;
+		Cuadra * ruta;
 
 		void setID(int ID);
 		int getID();		
-		void setORIGEN(segmento ORIGEN);
-		cuadra getORIGEN();
-		int getORIGENID();
-		void setDESTINO(segmento DESTINO);	
-		cuadra getDESTINO();
-		int getDESTINOID();
+
 }
 
 #endif
