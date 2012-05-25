@@ -1,16 +1,11 @@
 #include "include/cuadra.h"
 
-cuadra::cuadra(int ID,cuadra horizontal,cuadra vertical, semaforo shorizontal, semaforo svertical){
-	id = ID;						//clave unica del objeto
-	capacidad = 20;						//capacidad fija
-	ocupado = 0;						//cuantos automoviles hay
-	cua_proxima_horizontal = horizontal;			//proximo segmento horizontal
-	cua_proxima_vertical = vertical;			//proximo segmento vertical
-	fila[20] = {0};						//fila de automoviles
-	sem_horizontal = shorizontal;				//semaforo para segmento horizontal
-	sem_vertical = svertical;				//semaforo para segmento vertical
+cuadra::cuadra(int ID, int CAPACIDAD){
+	id = ID; 				//clave unica del objeto
+	capacidad = CAPACIDAD;
+	idAutos = new int [capacidad];
+	cantidad_autos = 0;
 	veces_congestionada = 0;
-
 }
 
 void cuadra::setID(int ID){
@@ -21,51 +16,26 @@ int cuadra::getID(){
 	return id;
 }
 
-int cuadra::getCAPACIDAD(int CAPACIDAD){
-	return capacidad;
-}
 
-int cuadra::getOCUPADO(){
-	return ocupado;
-}
-
-void cuadra::setPROXIMAS(cuadra horizontal,cuadra vertical){
-	cua_proxima_horizontal = horizontal;
-	cua_proxima_vertical = vertical;
-}
-
-bool cuadra::agregarAUTO(automovil AUTO){
-	if(ocupado<capacidad){
-		fila[ocupado]=AUTO;
-		ocupado++;
+bool cuadra::agregarAUTO(int AUTO){
+	if(cantidad_autos < 20){
+		idAutos[cantidad_autos] = AUTO;
+		cantidad_autos++;
 		return true;
 	}
-	else
+	else{	
+		veces_congestionada++;
 		return false;
-	
+	}
 }
 
-automovil cuadra::sacarAUTO(){
-	automovil aux;
+void cuadra::sacarAUTO(){
+	int aux;
 	int i;
 	
-	if(ocupado > 0){
-		for(i = (ocupado - 1) ; i > 0 ; i++){
-		aux=fila[i-1];
-		fila[i-1] =fila[i];		
-		}
-		return aux;
-	}
-	else
-		return null;	
+	if(cantidad_autos > 0){
+		cantidad_autos--;
+		for(i = 0 ; i > cantidad_autos - 1 ; i++)
+			idAutos[i] = idAutos[i+1];		
+	}	
 }
-
-
-void cuadra::congestion(){
-	veces_congestionada++;
-}
-
-
-
-
-
