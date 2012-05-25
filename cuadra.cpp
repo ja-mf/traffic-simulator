@@ -30,7 +30,6 @@ bool cuadra::agregarAuto(int AUTO){
 }
 
 void cuadra::sacarAuto(){
-	int aux;
 	int i;
 	
 	if(cantidad_autos > 0){
