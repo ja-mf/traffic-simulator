@@ -18,13 +18,8 @@ class Cuadra {
 		int getid();
 		int getAutos();
 
-		
-
-		void setPROXIMAS(Cuadra *, Cuadra *);
-
 		bool agregarAuto();
 		bool sacarAuto();
-		
-		void congestion();	
+			
 }
 #endif
