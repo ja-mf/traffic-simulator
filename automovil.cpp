@@ -1,10 +1,8 @@
 #include "include/automovil.h"
 
-automovil::automovil(int ID, cuadra ORIGEN,cuadra DESTINO, ruta CAMINO){
+automovil::automovil(int ID, Cuadra * RUTA){
 	id = ID;
-	origen = ORIGEN;
-	destino = DESTINO;
-	camino = CAMINO;
+	ruta = RUTA;			//revisar como ingresar ruta al objeto
 }
 
 void automovil::setID(int ID){
@@ -15,28 +13,3 @@ int automovil::getID(){
 	return id;
 }
 
-void automovil::setORIGEN(segmento ORIGEN){
-	origen = ORIGEN;
-}
-
-cuadra automovil::getORIGEN(){
-	return origen;
-}
-
-int automovil::getORIGENID(){
-	//return origen.id;
-	return origen.getID();
-}
-
-void setDESTINO(cuadra DESTINO){
-	destino = DESTINO;
-}
-
-cuadra getDESTINO(){
-	return destino;
-}
-
-int getDESTINOID(){
-	//return destino.id;
-	return destino.getID();
-}
