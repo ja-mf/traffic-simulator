@@ -1,4 +1,6 @@
-#include "iostream"
+#ifndef AUTOMOVIL_H
+#define AUTOMOVIL_H
+
 #include "cuadra.h"
 #include "ruta.h"
 
@@ -19,3 +21,5 @@ class automovil{
 		cuadra getDESTINO();
 		int getDESTINOID();
 }
+
+#endif

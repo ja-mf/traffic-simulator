@@ -1,4 +1,5 @@
-#include "iostream"
+#ifndef SEMAFORO_H
+#define SEMAFORO_H
 
 class semaforo{
 	public:	
@@ -11,3 +12,5 @@ class semaforo{
 		void cambiarESTADO();
 		bool getESTADO();
 }
+
+#endif

@@ -1,4 +1,4 @@
-#include "semaforo.h"
+#include "include/semaforo.h"
 
 semaforo::semaforo(int ID, bool ESTADO){
 	id = ID;

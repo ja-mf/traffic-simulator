@@ -1,4 +1,4 @@
-#include "automovil.h"
+#include "include/automovil.h"
 
 automovil::automovil(int ID, cuadra ORIGEN,cuadra DESTINO, ruta CAMINO){
 	id = ID;

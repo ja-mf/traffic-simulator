@@ -1,4 +1,4 @@
-#include "ruta.h"
+#include "include/ruta.h"
 
 ruta::ruta(int ID, int tam){
 	id = ID;

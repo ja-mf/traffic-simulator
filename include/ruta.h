@@ -1,4 +1,6 @@
-#include "iostream"
+#ifndef RUTA_H
+#define RUTA_H
+
 #include "cuadra.h"
 
 class ruta{
@@ -16,3 +18,5 @@ class ruta{
 		cuadra siguiente_seg(cuadra actual);
 		int siguiente_segID(int actual);			
 }
+
+#endif

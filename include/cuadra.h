@@ -1,4 +1,6 @@
-#include "iostream"
+#ifndef CUADRA_H
+#define CUADRA_H
+
 #include "automovil.h"
 
 class cuadra{
@@ -22,4 +24,4 @@ class cuadra{
 		automovil sacarAUTO();
 		void congestion();	
 }
-
+#endif

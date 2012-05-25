@@ -1,4 +1,4 @@
-#include "cuadra.h"
+#include "include/cuadra.h"
 
 cuadra::cuadra(int ID,cuadra horizontal,cuadra vertical, semaforo shorizontal, semaforo svertical){
 	id = ID;						//clave unica del objeto
