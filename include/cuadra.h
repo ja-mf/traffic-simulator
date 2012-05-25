@@ -8,7 +8,8 @@ class Cuadra {
 	public:
 		int id;	
 		int * idAutos;
-
+		int capacidad;				//20 para las que se pueden congestionar
+							//1000 para las iniciales
 		Semaforo * s;
 		
 		int veces_congestionada;
