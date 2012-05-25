@@ -17,7 +17,7 @@ int cuadra::getID(){
 }
 
 
-bool cuadra::agregarAUTO(int AUTO){
+bool cuadra::agregarAuto(int AUTO){
 	if(cantidad_autos < 20){
 		idAutos[cantidad_autos] = AUTO;
 		cantidad_autos++;
@@ -29,7 +29,7 @@ bool cuadra::agregarAUTO(int AUTO){
 	}
 }
 
-void cuadra::sacarAUTO(){
+void cuadra::sacarAuto(){
 	int aux;
 	int i;
 	
