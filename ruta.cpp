@@ -40,6 +40,6 @@ int ruta::siguiente_segID(int actual){
 	for(i = 0; i < tamano; i++)
 		if(lista[i].getID() == actual)
 			return lista[i+1].getID();
-	return -1;d
+	return -1;
 }
 	
