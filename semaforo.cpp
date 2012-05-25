@@ -1,8 +1,10 @@
 #include "include/semaforo.h"
 
-semaforo::semaforo(int ID, bool ESTADO){
+semaforo::semaforo(int ID, bool ESTADO, Cuadra * h, Cuadra * v){
 	id = ID;
 	estado = ESTADO;
+	horizontal = h;
+	vertical = v;
 }
 
 void semaforo::setID(int ID){
