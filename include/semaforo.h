@@ -5,6 +5,8 @@ class Semaforo {
 	public:	
 		int id;
 		bool estado;
+		Cuadra * horizontal;
+		Cuadra * vertical;
 	
 		void setid(int);
 		int getid();
