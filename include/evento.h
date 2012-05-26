@@ -6,20 +6,24 @@
 // clase padre
 class Evento {
 	public:
+		int tiempo;
 		Evento();
 		~Evento();
+		int get_tiempo();
 };
 
 
 class LlegadaAuto: public Evento {
 	public:
-		LlegadaAuto(Cuadra *);
+		LlegadaAuto(int, Cuadra *);
 		Automovil * a;
 };
 
 class CambioSemaforo: public Evento {
 	public:
-		CambioSemaforo(int);
+		int id;
+		CambioSemaforo(int, int);
+		int getID();
 };
 
 #endif

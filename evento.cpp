@@ -11,9 +11,13 @@ Evento::Evento() {
 Evento::~Evento() {
 }
 
-LlegadaAuto::LlegadaAuto(Cuadra * ruta) {
-	int id_cuadra_origen;
+int Evento::get_tiempo(){
+	return tiempo;
+}
 
+LlegadaAuto::LlegadaAuto(int t, Cuadra * ruta) {
+	int id_cuadra_origen;
+	tiempo = t;
 	id_auto++;
 	a = new Automovil(id_auto, ruta);
 	
@@ -22,6 +26,11 @@ LlegadaAuto::LlegadaAuto(Cuadra * ruta) {
 	calle[id_cuadra_origen]::agregarAuto(id_auto);
 }
 
-CambioSemaforo::CambioSemaforo(int id) {
+CambioSemaforo::CambioSemaforo(int t, int id) {
+	tiempo = t;
+	id = id;
 }
 
+int CambioSemaforo::getID(){
+	return id;
+}
