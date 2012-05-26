@@ -1,6 +1,6 @@
 #include "include/automovil.h"
 
-Automovil::Automovil(int ID, Cuadra * RUTA){
+Automovil::Automovil(int ID, int * RUTA){
 	id = ID;
 	ruta = RUTA;			//revisar como ingresar ruta al objeto
 }

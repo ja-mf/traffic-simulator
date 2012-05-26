@@ -7,12 +7,12 @@ class Automovil {
 	
 	public: 
 		int id;
-		Cuadra * ruta;
+		int * ruta;
 
 		void setID(int ID);
 		int getID();		
 
-		Automovil(int, Cuadra *);
+		Automovil(int, int *);
 
 };
 

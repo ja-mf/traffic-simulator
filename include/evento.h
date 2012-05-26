@@ -16,7 +16,7 @@
 };*/
 
 
-class LlegadaAuto:{
+class LlegadaAuto{
 	public:
 		int tiempo;
 		int tipo;
@@ -24,7 +24,7 @@ class LlegadaAuto:{
 		Automovil * a;
 };
 
-class CambioSemaforo:{
+class CambioSemaforo{
 	public:
 		int tiempo;
 		int tipo;

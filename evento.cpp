@@ -28,7 +28,7 @@ LlegadaAuto::LlegadaAuto(int t, int * ruta) {
 	
 	id_cuadra_origen = ruta[0];
 
-	calle[id_cuadra_origen]::agregarAuto(id_auto);
+	calle[id_cuadra_origen]->agregarAuto(id_auto);
 }
 
 CambioSemaforo::CambioSemaforo(int t, int id) {

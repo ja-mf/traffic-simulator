@@ -1,10 +1,6 @@
 #include <iostream>
 #include <stdlib.h>
-#include "include/automovil.h"
-#include "include/cuadra.h"
-#include "include/semaforo.h"
 #include "include/main.h"
-#include "include/evento.h"
 
 int main(int argc,const char* argv[]){
 	//declaracion de variables
@@ -13,11 +9,10 @@ int main(int argc,const char* argv[]){
 	int delta; 				//capturar tiempo, y diferencia	
 	int i;
 	int control_simulador;
-	Cuadra * calle[25];					
-	Semaforo * sem[9];
-	Evento listaEventos[37];
+	LlegadaAuto * le1[50];
+	CambioSemaforo * le2[50];
 
-	//int * ruta = new int[4];
+	int * ruta = new int[4];
 
 	//inicializacion de variables
 	for(i = 0; i < 12; i++)
@@ -42,16 +37,31 @@ int main(int argc,const char* argv[]){
 
 
 	// inicializar la lista de eventos de forma estatica
-	//ruta[0] = 3;
-	//ruta[1] = 12;
-	//ruta[2] = 13;
-	//ruta[3] = 4;
-	//listaEventos[0] = new LlegadaAuto(1, ruta);
-	listaEventos[0] = new LlegadaAuto(1, {3,12,13,4});
+	ruta[0] = 3;
+	ruta[1] = 12;
+	ruta[2] = 13;
+	ruta[3] = 4;
+	le1[0] = new LlegadaAuto(1, ruta);
 	
+	le2[0] = new CambioSemaforo(23,0);
+	le2[1] = new CambioSemaforo(27,0);
+	le2[2] = new CambioSemaforo(77,0);
+	le2[3] = new CambioSemaforo(90,0);
+	le2[4] = new CambioSemaforo(94,1);
+	le2[5] = new CambioSemaforo(119,1);
+	le2[6] = new CambioSemaforo(141,1);
+	le2[7] = new CambioSemaforo(144,1);
+	le2[8] = new CambioSemaforo(199,1);
+	le2[9] = new CambioSemaforo(208,1);
+	le2[10] = new CambioSemaforo(269,1);
+	le2[11] = new CambioSemaforo(270,1);
+	le2[12] = new CambioSemaforo(285,0);
+	le2[13] = new CambioSemaforo(291,0);
+	le2[14] = new CambioSemaforo(295,1);
+	le2[15] = new CambioSemaforo(312,1);		
 
 	while(control_simulador < tiempo_simulacion){
-		switch(siguiente_evento()){
+/*		switch(siguiente_evento()){
 			case 0 :{
 				break;			
 			}//end case0		
@@ -61,7 +71,9 @@ int main(int argc,const char* argv[]){
 		}		
 		//delta = evento_actual - delta;	//cuanto tiempo transcurrio entre eventos
 		//control_simulador += delta;		//sumar ese tiempo
-		//delta = evento_actual;		//obtener el tiempo de este evento
+
+	//delta = evento_actual;		//obtener el tiempo de este evento
+*/
 	}//end while
 
 
