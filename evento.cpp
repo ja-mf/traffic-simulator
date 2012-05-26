@@ -15,9 +15,14 @@ int Evento::get_tiempo(){
 	return tiempo;
 }
 
-LlegadaAuto::LlegadaAuto(int t, Cuadra * ruta) {
+int Evento::get_tipo(){
+	return tipo;
+}
+
+LlegadaAuto::LlegadaAuto(int t, int * ruta) {
 	int id_cuadra_origen;
 	tiempo = t;
+	tipo = 0;
 	id_auto++;
 	a = new Automovil(id_auto, ruta);
 	
@@ -28,6 +33,7 @@ LlegadaAuto::LlegadaAuto(int t, Cuadra * ruta) {
 
 CambioSemaforo::CambioSemaforo(int t, int id) {
 	tiempo = t;
+	tipo = 1;
 	id = id;
 }
 
