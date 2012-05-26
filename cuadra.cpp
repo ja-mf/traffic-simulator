@@ -1,4 +1,5 @@
 #include "include/cuadra.h"
+#include <iostream>
 
 Cuadra::Cuadra(int ID, int CAPACIDAD){
 	id = ID; 				//clave unica del objeto
@@ -17,9 +18,10 @@ int Cuadra::getID(){
 	return id;
 }
 
-
-bool Cuadra::agregarAuto(int AUTO){
-	intentos++;
+bool Cuadra::agregarAuto(int AUTO) {
+	std::cout << intentos << std::endl;	
+	//this->intentos++;
+	/*
 	if(cantidad_autos < 20){
 		idAutos[cantidad_autos] = AUTO;
 		cantidad_autos++;
@@ -29,6 +31,8 @@ bool Cuadra::agregarAuto(int AUTO){
 		veces_congestionada++;
 		return false;
 	}
+	
+	*/
 }
 
 void Cuadra::sacarAuto(){

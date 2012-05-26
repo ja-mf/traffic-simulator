@@ -9,8 +9,11 @@ int main(int argc,const char* argv[]){
 	int delta; 				//capturar tiempo, y diferencia	
 	int i;
 	int control_simulador;
-	LlegadaAuto * le1[16];
-	CambioSemaforo * le2[21];
+	LlegadaAuto * le1[21];
+	CambioSemaforo * le2[16];
+
+	LlegadaAuto * pico;
+
 	int contador1, contador2;
 
 	int * ruta1 = new int[4];
@@ -69,7 +72,7 @@ int main(int argc,const char* argv[]){
 	le1[18] = new LlegadaAuto(245, ruta2);
 	le1[19] = new LlegadaAuto(255, ruta2);
 	le1[20] = new LlegadaAuto(274, ruta1);
-	
+	/*
 	le2[0] = new CambioSemaforo(23,0);
 	le2[1] = new CambioSemaforo(27,0);
 	le2[2] = new CambioSemaforo(77,0);
@@ -88,23 +91,21 @@ int main(int argc,const char* argv[]){
 	le2[15] = new CambioSemaforo(312,1);		
 
 	while(control_simulador < tiempo_simulacion){
-
-		if(le1[contador1]<le2[contador2]){
+		if(le1[contador1]->tiempo < le2[contador2]->tiempo){
 			//llega automovil
-			delta = le1[contador1] - delta;
+			delta = le1[contador1]->tiempo - delta;
 			control_simulador += delta;	
-			delta = le1[contador1];			
+			delta = le1[contador1]->tiempo;			
 			contador1++;		
 		}else{
 			//cambio de semaforo
-			delta = le2[contador2] - delta;
+			delta = le2[contador2]->tiempo - delta;
 			control_simulador += delta;	
-			delta = le2[contador2];
+			delta = le2[contador2]->tiempo;
 			contador2++;
-		}		
-
+		}
 	}//end while
-
+*/
 
 }//end main
 

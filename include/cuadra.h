@@ -10,7 +10,7 @@ class Cuadra {
 		
 		int veces_congestionada;
 		int intentos;
-
+	
 		void setID(int);
 		int getID();
 

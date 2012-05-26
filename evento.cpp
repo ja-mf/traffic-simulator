@@ -1,3 +1,4 @@
+#include <iostream>
 #include "include/main.h"
 #include "include/cuadra.h"
 #include "include/automovil.h"
@@ -27,7 +28,7 @@ LlegadaAuto::LlegadaAuto(int t, int * ruta) {
 	a = new Automovil(id_auto, ruta);
 	
 	id_cuadra_origen = ruta[0];
-
+//	cout << id_cuadra_origen << endl; 
 	calle[id_cuadra_origen]->agregarAuto(id_auto);
 }
 
