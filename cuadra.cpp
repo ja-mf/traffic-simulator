@@ -1,6 +1,6 @@
 #include "include/cuadra.h"
 
-cuadra::cuadra(int ID, int CAPACIDAD){
+Cuadra::Cuadra(int ID, int CAPACIDAD){
 	id = ID; 				//clave unica del objeto
 	capacidad = CAPACIDAD;
 	idAutos = new int [capacidad];
@@ -8,16 +8,16 @@ cuadra::cuadra(int ID, int CAPACIDAD){
 	veces_congestionada = 0;
 }
 
-void cuadra::setID(int ID){
+void Cuadra::setID(int ID){
 	id = ID;
 }
 
-int cuadra::getID(){
+int Cuadra::getID(){
 	return id;
 }
 
 
-bool cuadra::agregarAuto(int AUTO){
+bool Cuadra::agregarAuto(int AUTO){
 	if(cantidad_autos < 20){
 		idAutos[cantidad_autos] = AUTO;
 		cantidad_autos++;
@@ -29,7 +29,7 @@ bool cuadra::agregarAuto(int AUTO){
 	}
 }
 
-void cuadra::sacarAuto(){
+void Cuadra::sacarAuto(){
 	int i;
 	
 	if(cantidad_autos > 0){

@@ -1,23 +1,21 @@
 #ifndef CUADRA_H
 #define CUADRA_H
 
-#include "automovil.h"
-#include "semaforo.h"
-
 class Cuadra {
 	public:
 		int id;	
 		int * idAutos;
 		int capacidad;				//20 para las que se pueden congestionar
-							//1000 para las iniciales
+		int cantidad_autos;					//1000 para las iniciales
 		
 		int veces_congestionada;
 
-		void setid(int);
-		int getid();
+		void setID(int);
+		int getID();
 
-		bool agregarAuto();
+		bool agregarAuto(int);
 		void sacarAuto();
-			
-}
+		
+		Cuadra(int, int);
+};
 #endif

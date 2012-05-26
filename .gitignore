@@ -11,4 +11,9 @@
 *.la
 *.a
 
+# Editors
 *~
+*.swp
+
+# Binary
+traffic

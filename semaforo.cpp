@@ -1,28 +1,28 @@
 #include "include/semaforo.h"
 
-semaforo::semaforo(int ID, bool ESTADO, Cuadra * h, Cuadra * v){
+Semaforo::Semaforo(int ID, bool Estado, Cuadra * h, Cuadra * v){
 	id = ID;
-	estado = ESTADO;
+	estado = Estado;
 	horizontal = h;
 	vertical = v;
 }
 
-void semaforo::setID(int ID){
+void Semaforo::setID(int ID){
 	id = ID;
 }
 
-int semaforo::getID(){
+int Semaforo::getID(){
 	return id;
 }
 
-void semaforo::setESTADO(bool ESTADO){
-	estado = ESTADO;
+void Semaforo::setEstado(bool Estado){
+	estado = Estado;
 }
 
-void semaforo::cambiarESTADO(){
+void Semaforo::cambiarEstado(){
 	estado = estado? false:true;
 	
 }
-bool semaforo::getESTADO(){
+bool Semaforo::getEstado(){
 	return estado;
 }

@@ -1,6 +1,8 @@
 #ifndef AUTOMOVIL_H
 #define AUTOMOVIL_H
 
+#include "cuadra.h"
+
 class Automovil {
 	
 	public: 
@@ -10,6 +12,8 @@ class Automovil {
 		void setID(int ID);
 		int getID();		
 
-}
+		Automovil(int, Cuadra *);
+
+};
 
 #endif

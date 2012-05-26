@@ -1,6 +1,8 @@
 #ifndef SEMAFORO_H
 #define SEMAFORO_H
 
+#include "cuadra.h"
+
 class Semaforo {
 	public:	
 		int id;
@@ -8,11 +10,13 @@ class Semaforo {
 		Cuadra * horizontal;
 		Cuadra * vertical;
 	
-		void setid(int);
-		int getid();
+		void setID(int);
+		int getID();
 		void setEstado(bool);
-		void cambiarESTADO();
-		bool getESTADO();
-}
+		void cambiarEstado();
+		bool getEstado();
+
+		Semaforo(int, bool, Cuadra *, Cuadra *);
+};
 
 #endif
