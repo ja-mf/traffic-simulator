@@ -20,7 +20,7 @@ int Evento::get_tipo(){
 	return tipo;
 }*/
 
-LlegadaAuto::LlegadaAuto(int t, int * ruta) {
+LlegadaAuto::LlegadaAuto(int t, int * ruta, Cuadra ** calle) {
 	int id_cuadra_origen;
 	tiempo = t;
 	tipo = 0;
@@ -30,6 +30,7 @@ LlegadaAuto::LlegadaAuto(int t, int * ruta) {
 	id_cuadra_origen = ruta[0];
 //	cout << id_cuadra_origen << endl; 
 	calle[id_cuadra_origen]->agregarAuto(id_auto);
+//	cout <<	calle[0]->intentos << endl;
 }
 
 CambioSemaforo::CambioSemaforo(int t, int id) {

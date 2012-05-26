@@ -8,6 +8,7 @@ Cuadra::Cuadra(int ID, int CAPACIDAD){
 	cantidad_autos = 0;
 	veces_congestionada = 0;
 	intentos = 0;
+//	std::cout << intentos << std::endl;
 }
 
 void Cuadra::setID(int ID){
@@ -19,9 +20,8 @@ int Cuadra::getID(){
 }
 
 bool Cuadra::agregarAuto(int AUTO) {
-	std::cout << intentos << std::endl;	
-	//this->intentos++;
-	/*
+	intentos++;
+	
 	if(cantidad_autos < 20){
 		idAutos[cantidad_autos] = AUTO;
 		cantidad_autos++;
@@ -32,7 +32,7 @@ bool Cuadra::agregarAuto(int AUTO) {
 		return false;
 	}
 	
-	*/
+	
 }
 
 void Cuadra::sacarAuto(){

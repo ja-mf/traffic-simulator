@@ -12,6 +12,9 @@ int main(int argc,const char* argv[]){
 	LlegadaAuto * le1[21];
 	CambioSemaforo * le2[16];
 
+	Cuadra * calle[25];
+	Semaforo * sem[9];
+		
 	LlegadaAuto * pico;
 
 	int contador1, contador2;
@@ -50,28 +53,30 @@ int main(int argc,const char* argv[]){
 	ruta2[0] = 1;	
 	ruta2[1] = 13;	
 	ruta2[2] = 2;
-	
-	le1[0] = new LlegadaAuto(1, ruta1);
-	le1[1] = new LlegadaAuto(3, ruta1);
-	le1[2] = new LlegadaAuto(6, ruta1);
-	le1[3] = new LlegadaAuto(14, ruta1);
-	le1[4] = new LlegadaAuto(21, ruta1);
-	le1[5] = new LlegadaAuto(36, ruta1);
-	le1[6] = new LlegadaAuto(46, ruta1);
-	le1[7] = new LlegadaAuto(51, ruta1);
-	le1[8] = new LlegadaAuto(59, ruta1);
-	le1[9] = new LlegadaAuto(60, ruta1);
-	le1[10] = new LlegadaAuto(150, ruta2);
-	le1[11] = new LlegadaAuto(163, ruta2);
-	le1[12] = new LlegadaAuto(171, ruta2);
-	le1[13] = new LlegadaAuto(174, ruta2);
-	le1[14] = new LlegadaAuto(187, ruta2);
-	le1[15] = new LlegadaAuto(213, ruta2);
-	le1[16] = new LlegadaAuto(235, ruta2);
-	le1[17] = new LlegadaAuto(236, ruta2);
-	le1[18] = new LlegadaAuto(245, ruta2);
-	le1[19] = new LlegadaAuto(255, ruta2);
-	le1[20] = new LlegadaAuto(274, ruta1);
+
+//	cout <<	calle[0]->intentos << endl;
+
+	le1[0] = new LlegadaAuto(1, ruta1, calle);
+	le1[1] = new LlegadaAuto(3, ruta1, calle);
+	le1[2] = new LlegadaAuto(6, ruta1, calle);
+	le1[3] = new LlegadaAuto(14, ruta1, calle);
+	le1[4] = new LlegadaAuto(21, ruta1, calle);
+	le1[5] = new LlegadaAuto(36, ruta1, calle);
+	le1[6] = new LlegadaAuto(46, ruta1, calle);
+	le1[7] = new LlegadaAuto(51, ruta1, calle);
+	le1[8] = new LlegadaAuto(59, ruta1, calle);
+	le1[9] = new LlegadaAuto(60, ruta1, calle);
+	le1[10] = new LlegadaAuto(150, ruta2, calle);
+	le1[11] = new LlegadaAuto(163, ruta2, calle);
+	le1[12] = new LlegadaAuto(171, ruta2, calle);
+	le1[13] = new LlegadaAuto(174, ruta2, calle);
+	le1[14] = new LlegadaAuto(187, ruta2, calle);
+	le1[15] = new LlegadaAuto(213, ruta2, calle);
+	le1[16] = new LlegadaAuto(235, ruta2, calle);
+	le1[17] = new LlegadaAuto(236, ruta2, calle);
+	le1[18] = new LlegadaAuto(245, ruta2, calle);
+	le1[19] = new LlegadaAuto(255, ruta2, calle);
+	le1[20] = new LlegadaAuto(274, ruta1, calle);
 	/*
 	le2[0] = new CambioSemaforo(23,0);
 	le2[1] = new CambioSemaforo(27,0);

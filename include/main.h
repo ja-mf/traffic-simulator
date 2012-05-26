@@ -9,7 +9,5 @@
 using namespace std;
 
 static int id_auto = 0;
-static Cuadra * calle[25];
-static Semaforo * sem[9];
 
 #endif

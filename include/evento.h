@@ -20,7 +20,7 @@ class LlegadaAuto{
 	public:
 		int tiempo;
 		int tipo;
-		LlegadaAuto(int, int *);
+		LlegadaAuto(int, int *, Cuadra**);
 		Automovil * a;
 };
 
