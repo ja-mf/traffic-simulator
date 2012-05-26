@@ -1,19 +1,23 @@
 #include <iostream>
+#include <stdlib.h>
 #include "include/automovil.h"
 #include "include/cuadra.h"
 #include "include/semaforo.h"
-
-using namespace std;
+#include "include/main.h"
+#include "include/evento.h"
 
 int main(int argc,const char* argv[]){
 	//declaracion de variables
 	int indice_auto;
-	int tiempo_simulacion = argv[1];	//tiempo a simular	
+	int tiempo_simulacion = atoi(argv[1]);	//tiempo a simular	
 	int delta; 				//capturar tiempo, y diferencia	
 	int i;
 	int control_simulador;
 	Cuadra * calle[25];					
 	Semaforo * sem[9];
+	Evento listaEventos[37];
+
+	int * ruta = new int[4];
 
 	//inicializacion de variables
 	for(i = 0; i < 12; i++)
@@ -35,6 +39,14 @@ int main(int argc,const char* argv[]){
 	sem[6] = new Semaforo(6, false, calle[22],  calle[19]);
 	sem[7] = new Semaforo(7, false, calle[23],  calle[10]);
 	sem[8] = new Semaforo(8, false, calle[8],   calle[21]);
+
+
+	// inicializar la lista de eventos de forma estatica
+	ruta[0] = 3;
+	ruta[1] = 12;
+	ruta[2] = 13;
+	ruta[3] = 4;
+	listaEventos[0] = new LlegadaAuto(1, ruta);
 
 	while(control_simulador < tiempo_simulacion){
 		switch(siguiente_evento()){
