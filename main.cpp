@@ -11,13 +11,14 @@ int main(int argc,const char* argv[]){
 	int control_simulador;
 	LlegadaAuto * le1[21];
 	CambioSemaforo * le2[16];
-
+	automovil a[100];
 	Cuadra * calle[25];
 	Semaforo * sem[9];
 		
 	LlegadaAuto * pico;
 
 	int contador1, contador2;
+	int a_actual = 0;
 
 	int * ruta1 = new int[4];
 	int * ruta2 = new int[3];
@@ -96,8 +97,11 @@ int main(int argc,const char* argv[]){
 	le2[15] = new CambioSemaforo(312,1);		
 
 	while(control_simulador < tiempo_simulacion){
-		if(le1[contador1]->tiempo < le2[contador2]->tiempo){
+		if(le1[contador1]->tiempo < le2[contador2]->tiempo){			
 			//llega automovil
+			a[a_actual] = new automovil(a_actual,le1[contador1]->a->ruta);
+			calle[a[a_actual]->ruta[0]].agregarAuto(a_actual);
+			a_actual++;
 			delta = le1[contador1]->tiempo - delta;
 			control_simulador += delta;	
 			delta = le1[contador1]->tiempo;			
