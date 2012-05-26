@@ -5,7 +5,7 @@
 
 using namespace std;
 
-Evento::Evento() {
+/*Evento::Evento() {
 }
 
 Evento::~Evento() {
@@ -17,7 +17,7 @@ int Evento::get_tiempo(){
 
 int Evento::get_tipo(){
 	return tipo;
-}
+}*/
 
 LlegadaAuto::LlegadaAuto(int t, int * ruta) {
 	int id_cuadra_origen;

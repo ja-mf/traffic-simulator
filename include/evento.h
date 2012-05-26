@@ -3,8 +3,8 @@
 
 #include "cuadra.h"
 
-// clase padre
-class Evento {
+
+/*class Evento {
 	public:
 		int tiempo;
 		int tipo;
@@ -13,17 +13,21 @@ class Evento {
 		int get_tiempo();
 		int get_tipo();			//0 = automovil
 						//1 = semaforo
-};
+};*/
 
 
-class LlegadaAuto: public Evento {
+class LlegadaAuto:{
 	public:
+		int tiempo;
+		int tipo;
 		LlegadaAuto(int, int *);
 		Automovil * a;
 };
 
-class CambioSemaforo: public Evento {
+class CambioSemaforo:{
 	public:
+		int tiempo;
+		int tipo;
 		int id;
 		CambioSemaforo(int, int);
 		int getID();

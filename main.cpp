@@ -17,7 +17,7 @@ int main(int argc,const char* argv[]){
 	Semaforo * sem[9];
 	Evento listaEventos[37];
 
-	int * ruta = new int[4];
+	//int * ruta = new int[4];
 
 	//inicializacion de variables
 	for(i = 0; i < 12; i++)
@@ -42,11 +42,13 @@ int main(int argc,const char* argv[]){
 
 
 	// inicializar la lista de eventos de forma estatica
-	ruta[0] = 3;
-	ruta[1] = 12;
-	ruta[2] = 13;
-	ruta[3] = 4;
-	listaEventos[0] = new LlegadaAuto(1, ruta);
+	//ruta[0] = 3;
+	//ruta[1] = 12;
+	//ruta[2] = 13;
+	//ruta[3] = 4;
+	//listaEventos[0] = new LlegadaAuto(1, ruta);
+	listaEventos[0] = new LlegadaAuto(1, {3,12,13,4});
+	
 
 	while(control_simulador < tiempo_simulacion){
 		switch(siguiente_evento()){
@@ -65,8 +67,3 @@ int main(int argc,const char* argv[]){
 
 }//end main
 
-
-int siguiente_evento(){
-
-
-}
