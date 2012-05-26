@@ -9,10 +9,12 @@ int main(int argc,const char* argv[]){
 	int delta; 				//capturar tiempo, y diferencia	
 	int i;
 	int control_simulador;
-	LlegadaAuto * le1[50];
-	CambioSemaforo * le2[50];
+	LlegadaAuto * le1[16];
+	CambioSemaforo * le2[21];
+	int contador1, contador2;
 
-	int * ruta = new int[4];
+	int * ruta1 = new int[4];
+	int * ruta2 = new int[3];
 
 	//inicializacion de variables
 	for(i = 0; i < 12; i++)
@@ -22,6 +24,7 @@ int main(int argc,const char* argv[]){
 	indice_auto = 0;
 	control_simulador = 0;	
 	delta = 0;
+	contador1 = contador2 = 0;
 
 	//constructor id , estado, horizontal, vertical
 	//del 1 ,3,6,7,9,11 llega el trafico
@@ -37,11 +40,35 @@ int main(int argc,const char* argv[]){
 
 
 	// inicializar la lista de eventos de forma estatica
-	ruta[0] = 3;
-	ruta[1] = 12;
-	ruta[2] = 13;
-	ruta[3] = 4;
-	le1[0] = new LlegadaAuto(1, ruta);
+	ruta1[0] = 3;
+	ruta1[1] = 12;
+	ruta1[2] = 13;
+	ruta1[3] = 4;
+	ruta2[0] = 1;	
+	ruta2[1] = 13;	
+	ruta2[2] = 2;
+	
+	le1[0] = new LlegadaAuto(1, ruta1);
+	le1[1] = new LlegadaAuto(3, ruta1);
+	le1[2] = new LlegadaAuto(6, ruta1);
+	le1[3] = new LlegadaAuto(14, ruta1);
+	le1[4] = new LlegadaAuto(21, ruta1);
+	le1[5] = new LlegadaAuto(36, ruta1);
+	le1[6] = new LlegadaAuto(46, ruta1);
+	le1[7] = new LlegadaAuto(51, ruta1);
+	le1[8] = new LlegadaAuto(59, ruta1);
+	le1[9] = new LlegadaAuto(60, ruta1);
+	le1[10] = new LlegadaAuto(150, ruta2);
+	le1[11] = new LlegadaAuto(163, ruta2);
+	le1[12] = new LlegadaAuto(171, ruta2);
+	le1[13] = new LlegadaAuto(174, ruta2);
+	le1[14] = new LlegadaAuto(187, ruta2);
+	le1[15] = new LlegadaAuto(213, ruta2);
+	le1[16] = new LlegadaAuto(235, ruta2);
+	le1[17] = new LlegadaAuto(236, ruta2);
+	le1[18] = new LlegadaAuto(245, ruta2);
+	le1[19] = new LlegadaAuto(255, ruta2);
+	le1[20] = new LlegadaAuto(274, ruta1);
 	
 	le2[0] = new CambioSemaforo(23,0);
 	le2[1] = new CambioSemaforo(27,0);
@@ -61,19 +88,21 @@ int main(int argc,const char* argv[]){
 	le2[15] = new CambioSemaforo(312,1);		
 
 	while(control_simulador < tiempo_simulacion){
-/*		switch(siguiente_evento()){
-			case 0 :{
-				break;			
-			}//end case0		
-			default:{
-							
-			}//end default
-		}		
-		//delta = evento_actual - delta;	//cuanto tiempo transcurrio entre eventos
-		//control_simulador += delta;		//sumar ese tiempo
 
-	//delta = evento_actual;		//obtener el tiempo de este evento
-*/
+		if(le1[contador1]<le2[contador2]){
+			//llega automovil
+			delta = le1[contador1] - delta;
+			control_simulador += delta;	
+			delta = le1[contador1];			
+			contador1++;		
+		}else{
+			//cambio de semaforo
+			delta = le2[contador2] - delta;
+			control_simulador += delta;	
+			delta = le2[contador2];
+			contador2++;
+		}		
+
 	}//end while
 
 
