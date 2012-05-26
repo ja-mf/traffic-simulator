@@ -20,16 +20,13 @@ int Evento::get_tipo(){
 	return tipo;
 }*/
 
-LlegadaAuto::LlegadaAuto(int t, int * ruta, Cuadra ** calle) {
-	int id_cuadra_origen;
+LlegadaAuto::LlegadaAuto(int t, int * r) {
 	tiempo = t;
 	tipo = 0;
-	id_auto++;
-	a = new Automovil(id_auto, ruta);
-	
-	id_cuadra_origen = ruta[0];
+	ruta = r;
+//	a = new Automovil(id_auto, ruta);
 //	cout << id_cuadra_origen << endl; 
-	calle[id_cuadra_origen]->agregarAuto(id_auto);
+//	calle[id_cuadra_origen]->agregarAuto(id_auto);
 //	cout <<	calle[0]->intentos << endl;
 }
 

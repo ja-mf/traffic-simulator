@@ -20,8 +20,8 @@ class LlegadaAuto{
 	public:
 		int tiempo;
 		int tipo;
-		LlegadaAuto(int, int *, Cuadra**);
-		Automovil * a;
+		int * ruta;
+		LlegadaAuto(int, int *);
 };
 
 class CambioSemaforo{

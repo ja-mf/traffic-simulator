@@ -8,6 +8,4 @@
 
 using namespace std;
 
-static int id_auto = 0;
-
 #endif
