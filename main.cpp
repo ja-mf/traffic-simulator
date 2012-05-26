@@ -7,7 +7,11 @@ using namespace std;
 
 int main(int argc,const char* argv[]){
 	//declaracion de variables
+	
+	int tiempo_simulacion = argv[1];	//tiempo a simular	
+	int delta; 				//capturar tiempo, y diferencia	
 	int i;
+	int control_simulador = 0;
 	Cuadra * calle[25];					
 	Semaforo * sem[9];
 
@@ -28,4 +32,24 @@ int main(int argc,const char* argv[]){
 	sem[6] = new Semaforo(6, true, calle[22],  calle[19]);
 	sem[7] = new Semaforo(7, true, calle[23],  calle[10]);
 	sem[8] = new Semaforo(8, true, calle[8],   calle[21]);
+
+	while(control_simulador < tiempo simulacion){
+		switch(siguiente_evento()){
+			case 0 :{
+			break;			
+			}//end case0		
+			default:{
+			}//end default
+		}		
+
+
+	}//end while
+
+
+}//end main
+
+
+int siguiente_evento(){
+
+
 }

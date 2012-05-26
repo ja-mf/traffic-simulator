@@ -9,6 +9,7 @@ class Cuadra {
 		int cantidad_autos;					//1000 para las iniciales
 		
 		int veces_congestionada;
+		int intentos;
 
 		void setID(int);
 		int getID();
